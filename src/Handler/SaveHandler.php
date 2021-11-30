@@ -53,6 +53,7 @@ class SaveHandler extends \Mia\Auth\Request\MiaAuthRequestHandler
         $item->seo_description = $this->getParam($request, 'seo_description', '');
 
         $item->type = intval($this->getParam($request, 'type', '0'));
+        $item->ord = intval($this->getParam($request, 'ord', '0'));
 
         $item->status = intval($this->getParam($request, 'status', '0'));
         $item->visibility = intval($this->getParam($request, 'visibility', '0'));
