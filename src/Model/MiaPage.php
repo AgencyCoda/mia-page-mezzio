@@ -103,6 +103,8 @@ namespace Mia\Page\Model;
  */
 class MiaPage extends \Illuminate\Database\Eloquent\Model
 {
+    use \RecursiveRelationships\Traits\HasRecursiveRelationships;
+
     protected $table = 'mia_page';
     
     protected $casts = ['data' => 'array'];

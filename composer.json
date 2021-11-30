@@ -12,7 +12,8 @@
         "php": "^7.3",
         "agencycoda/mia-core-mezzio": "dev-main",
         "agencycoda/mia-auth-mezzio": "dev-main",
-        "agencycoda/mia-eloquent-mezzio": "dev-main"
+        "agencycoda/mia-eloquent-mezzio": "dev-main",
+        "paxha/laravel-recursive-relationships": "^1.1"
     },
     "autoload": {
         "psr-4": {

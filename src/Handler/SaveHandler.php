@@ -52,6 +52,8 @@ class SaveHandler extends \Mia\Auth\Request\MiaAuthRequestHandler
         $item->seo_keywords = $this->getParam($request, 'seo_keywords', '');
         $item->seo_description = $this->getParam($request, 'seo_description', '');
 
+        $item->type = intval($this->getParam($request, 'type', '0'));
+
         $item->status = intval($this->getParam($request, 'status', '0'));
         $item->visibility = intval($this->getParam($request, 'visibility', '0'));
 
@@ -59,6 +61,8 @@ class SaveHandler extends \Mia\Auth\Request\MiaAuthRequestHandler
 
         $item->is_archive = intval($this->getParam($request, 'is_archive', '0'));
         $item->last_updated_user = $user->id;
+
+        $item->parent_id = $this->getParam($request, 'parent_id', null);
         
         try {
             $item->save();
