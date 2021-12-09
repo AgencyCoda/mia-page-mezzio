@@ -59,9 +59,14 @@ class SaveHandler extends \Mia\Auth\Request\MiaAuthRequestHandler
         $item->visibility = intval($this->getParam($request, 'visibility', '0'));
 
         $item->published_date = $this->getParam($request, 'published_date', null);
+        if($item->published_date == ''){
+            $item->published_date = null;
+        }
 
         $item->is_archive = intval($this->getParam($request, 'is_archive', '0'));
-        $item->last_updated_user = $user->id;
+        if($user != null){
+            $item->last_updated_user = $user->id;
+        }
 
         $item->parent_id = $this->getParam($request, 'parent_id', null);
         

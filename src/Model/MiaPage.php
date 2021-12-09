@@ -105,6 +105,12 @@ class MiaPage extends \Illuminate\Database\Eloquent\Model
 {
     use \RecursiveRelationships\Traits\HasRecursiveRelationships;
 
+    const STATUS_DRAFT = 0;
+    const STATUS_PUBLISHED = 1;
+
+    const VISIBILITY_NOT_PUBLIC = 0;
+    const VISIBILITY_PUBLIC = 1;
+
     protected $table = 'mia_page';
     
     protected $casts = ['data' => 'array'];
